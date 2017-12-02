@@ -1,0 +1,15 @@
+This is my repo for my PHP solutions for the 2017 Advent of Code game.
+
+http://adventofcode.com/
+
+Each day and puzzle I attempt can be found in its own branch. I am running
+a script which automatically runs tests whenever code changes and if they
+are passing, it will automatically create a commit. Once the challenge is 
+complete, I'll squash and merge the branch back into master, but I'll leave
+the step-by-step commits in their own branch.
+
+In order to follow along you'll need PHP 7.2, composer and in order to 
+use the auto-commit stuff, you'll need gulp, and of course git.
+
+The auto-commit process uses a file that is .gitignore'd to keep track of
+how many commits have been made and use that number in the commit message.
