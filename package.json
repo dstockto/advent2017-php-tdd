@@ -1,0 +1,23 @@
+{
+  "name": "advent_2017",
+  "version": "0.1.0",
+  "description": "PHP TDD solutions for Advent of Code 2017",
+  "dependencies": {
+    "gulp": "latest",
+    "gulp-debug": "^3.1.0",
+    "gulp-shell": "^0.6.3",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dstockto/advent2017-php-tdd"
+  },
+  "keywords": [
+    "php",
+    "tdd",
+    "phpspec"
+  ],
+  "author": "David Stockton",
+  "license": "Apache 2.0"
+}

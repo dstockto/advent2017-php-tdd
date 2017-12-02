@@ -1,0 +1,19 @@
+{
+    "name": "davidstockton/advent_2017",
+    "description": "Advent of Code 2017 Solutions with PHPSpec and TDD",
+    "require": {
+        "phpspec/phpspec": "^4.2"
+    },
+    "license": "Apache 2.0",
+    "authors": [
+        {
+            "name": "David Stockton",
+            "email": "dave@davidstockton.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Advent\\": "src/Advent"
+        }
+    }
+}
