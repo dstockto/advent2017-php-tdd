@@ -11,6 +11,6 @@ class SequenceMatchCounterSpec extends ObjectBehavior
 {
     public function it_is_initializable()
     {
-        $this->shouldHaveType(SequenceMatchCounter::class); 
+        $this->shouldHaveType(SequenceMatchCounter::class);
     }
 }
