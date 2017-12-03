@@ -33,6 +33,17 @@ class SequenceMatchCounter
 
     public function getCircleSequenceSum(): int
     {
-        return 6;
+        $sum = 0;
+
+        for ($index = 0, $indexMax = strlen($this->sequence); $index < $indexMax; $index++) {
+            $currentLetter = $this->sequence[$index];
+            $buddyLetter = $this->sequence[($index + 2) % 4];
+
+            if ($currentLetter === $buddyLetter) {
+                $sum += $currentLetter;
+            }
+        }
+
+        return $sum;
     }
 }
