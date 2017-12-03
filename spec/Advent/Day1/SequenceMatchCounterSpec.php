@@ -9,8 +9,19 @@ use Prophecy\Argument;
 
 class SequenceMatchCounterSpec extends ObjectBehavior
 {
+    public function let()
+    {
+        $this->beConstructedWith('4');
+    }
+
     public function it_is_initializable()
     {
         $this->shouldHaveType(SequenceMatchCounter::class);
+    }
+
+    public function it_will_return_3_for_1122()
+    {
+        $this->beConstructedWith('1122');
+        $this->getSequenceSum()->shouldBe(3);
     }
 }
