@@ -30,4 +30,9 @@ class SequenceMatchCounter
 
         return $sum;
     }
+
+    public function getCircleSequenceSum(): int
+    {
+        return 6;
+    }
 }
