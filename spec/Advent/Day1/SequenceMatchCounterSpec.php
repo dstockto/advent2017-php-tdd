@@ -24,4 +24,10 @@ class SequenceMatchCounterSpec extends ObjectBehavior
         $this->beConstructedWith('1122');
         $this->getSequenceSum()->shouldBe(3);
     }
+
+    public function it_will_return_4_for_1111()
+    {
+        $this->beConstructedWith('1111');
+        $this->getSequenceSum()->shouldBe(4);
+    }
 }

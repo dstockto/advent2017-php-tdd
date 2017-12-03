@@ -15,8 +15,19 @@ class SequenceMatchCounter
         $this->sequence = $sequence;
     }
 
-    public function getSequenceSum()
+    public function getSequenceSum(): int
     {
-        return 3;
+        $sum = 0;
+
+        $oldLetter = $this->sequence[0];
+        $sequence = substr($this->sequence, 1) . $oldLetter;
+        foreach (str_split($sequence) as $letter) {
+            if ($oldLetter === $letter) {
+                $sum += $letter;
+            }
+            $oldLetter = $letter;
+        }
+
+        return $sum;
     }
 }
