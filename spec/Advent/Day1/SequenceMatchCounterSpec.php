@@ -66,4 +66,10 @@ class SequenceMatchCounterSpec extends ObjectBehavior
         $this->beConstructedWith('123425');
         $this->getCircleSequenceSum()->shouldBe(4);
     }
+
+    public function it_will_return_12_for_circle_sequence_123123()
+    {
+        $this->beConstructedWith('123123');
+        $this->getCircleSequenceSum()->shouldBe(12);
+    }
 }
