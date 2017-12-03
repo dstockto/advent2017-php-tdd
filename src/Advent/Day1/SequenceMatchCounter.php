@@ -35,7 +35,7 @@ class SequenceMatchCounter
     {
         $sum = 0;
         $length = strlen($this->sequence);
-        $halfLen = $length / 2;
+        $halfLen = strlen($this->sequence) / 2;
 
         for ($index = 0, $indexMax = strlen($this->sequence); $index < $indexMax; $index++) {
             $currentLetter = $this->sequence[$index];
