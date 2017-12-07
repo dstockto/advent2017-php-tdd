@@ -36,4 +36,18 @@ class DataLoaderSpec extends ObjectBehavior
         $result->shouldHaveType(SpreadsheetChecksum::class);
         $result->getChecksum()->shouldBe(0);
     }
+
+    public function it_will_solve_day_2_part1()
+    {
+        $data = file(__DIR__ . '/data/day2.tsv');
+        $result = $this->buildChecksum(...$data);
+        $result->getChecksum()->shouldBe(48357);
+    }
+
+    public function it_will_solve_day_2_part2()
+    {
+        $data = file(__DIR__ . '/data/day2.tsv');
+        $result = $this->buildChecksum(...$data);
+        $result->getEvenlyDivisibleChecksum()->shouldBe(351);
+    }
 }
