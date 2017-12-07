@@ -28,4 +28,35 @@ class SpreadsheetChecksumSpec extends ObjectBehavior
 
         $this->getChecksum()->shouldBe($row1Value + $row2Value);
     }
+
+    public function it_will_calculate_evenly_divisible_checksums(SpreadsheetRow $row1, SpreadsheetRow $row2, SpreadsheetRow $row3)
+    {
+        $row1->getDivisibleChecksum()->willReturn(4);
+        $row2->getDivisibleChecksum()->willReturn(3);
+        $row3->getDivisibleChecksum()->willReturn(2);
+
+        $this->addRow($row1);
+        $this->addRow($row2);
+        $this->addRow($row3);
+
+        $this->getEvenlyDivisibleChecksum()->shouldBe(9);
+    }
+
+    public function it_will_calculate_evenly_divisible_checksums_part2(SpreadsheetRow $row1, SpreadsheetRow $row2, SpreadsheetRow $row3)
+    {
+        $values = [
+            random_int(1, 10000),
+            random_int(1, 1000),
+            random_int(1, 10000),
+        ];
+        $row1->getDivisibleChecksum()->willReturn($values[0]);
+        $row2->getDivisibleChecksum()->willReturn($values[1]);
+        $row3->getDivisibleChecksum()->willReturn($values[2]);
+
+        $this->addRow($row1);
+        $this->addRow($row2);
+        $this->addRow($row3);
+
+        $this->getEvenlyDivisibleChecksum()->shouldBe(array_sum($values));
+    }
 }

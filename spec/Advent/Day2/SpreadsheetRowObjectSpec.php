@@ -35,4 +35,16 @@ class SpreadsheetRowObjectSpec extends ObjectBehavior
         $this->beConstructedWith("200\t100\t145\t164");
         $this->getCheckDifference()->shouldBe(100);
     }
+
+    public function it_should_get_even_checksum_for_2_and_8()
+    {
+        $this->beConstructedWith("8\t7\t3\t2");
+        $this->getDivisibleChecksum()->shouldBe(4);
+    }
+
+    public function it_should_get_even_checksum_for_9_and_3()
+    {
+        $this->beConstructedWith("8\t9\t3\t25");
+        $this->getDivisibleChecksum()->shouldBe(3);
+    }
 }

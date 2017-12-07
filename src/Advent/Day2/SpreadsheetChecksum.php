@@ -21,4 +21,13 @@ class SpreadsheetChecksum
             }
         );
     }
+
+    public function getEvenlyDivisibleChecksum(): int
+    {
+        return collect($this->rows)->sum(
+            function (SpreadsheetRow $row) {
+                return $row->getDivisibleChecksum();
+            }
+        );
+    }
 }

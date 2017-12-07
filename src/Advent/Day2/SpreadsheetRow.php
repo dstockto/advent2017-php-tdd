@@ -11,4 +11,10 @@ interface SpreadsheetRow
      * @return int
      */
     public function getCheckDifference(): int;
+
+    /**
+     * Returns the result of dividing the only two evenly divisible numbers in a row
+     * @return int
+     */
+    public function getDivisibleChecksum(): int;
 }
