@@ -3,8 +3,8 @@ const shell = require('gulp-shell');
 const fs    = require('fs');
 
 gulp.task('default', () => {
-    gulp.watch('**/*.php', ['runtests']);
-    
+    gulp.watch('./spec/**/*.php', gulp.series('runtests'));
+    gulp.watch('./src/**/*.php', gulp.series('runtests'));
     fs.writeFile("autocommit_counter", "1", {flag: 'wx'}, () => {});
 });
 
